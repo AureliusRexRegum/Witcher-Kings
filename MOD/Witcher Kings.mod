@@ -1,7 +1,7 @@
-name = "Witcher Kings"
+name = "Witcher Kings Dev"
 path = "mod/Witcher Kings"
 
-user_dir = "Witcher"
+user_dir = "Witcher Kings"
 replace_path = "gfx/loadingscreens"
 replace_path = "history/characters"
 replace_path = "history/offmap_powers"
