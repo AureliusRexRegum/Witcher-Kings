@@ -1,11 +1,11 @@
 This page lists the steps to perform a new release of the mod.
 
-1. Update [MOD/Witcher/changelog.txt](MOD/Witcher/changelog.txt) with release version and date, compatible vanilla version, list of features & bugfixes.
-2. Check that [MOD/Witcher/credits.txt](MOD/Witcher/credits.txt) is up-to-date.
+1. Update [MOD/Witcher Kings/changelog.txt](MOD/Witcher Kings/changelog.txt) with release version and date, compatible vanilla version, list of features & bugfixes.
+2. Check that [MOD/Witcher Kings/credits.txt](MOD/Witcher Kings/credits.txt) is up-to-date.
 3. Launch the game with vanilla only and verify the in-game checksum matches the one from the launcher (otherwise verify game files integrity in Steam).
 4. Launch the game with vanilla + Witcher Kings mod (and no other mod) and note down the checksum.
 5. Update the supported_checksums in Witcher.mod file, replacing with the new checksum
-6. Copy the modified [MOD/Witcher/Witcher.mod](MOD/Witcher/Witcher.mod) file from git, launch the game again, and verify that the on-startup checksum warning doesn't popup, even when the associated game rule is active.
+6. Copy the modified [MOD/Witcher Kings/Witcher Kings.mod](MOD/Witcher Kings/Witcher Kings.mod) file from git, launch the game again, and verify that the on-startup checksum warning doesn't popup, even when the associated game rule is active.
 7. Commit the changes above
 > git commit -m "Prepare release v0.M.m"
 8. Tag the previous commit:
@@ -13,7 +13,7 @@ This page lists the steps to perform a new release of the mod.
 and push:
 > git push --tags
 9. On github releases, click "Draft a new release" with name "v0.M.m" and copy/paste the changelog.
-10. Zip [MOD/Witcher/](MOD/Witcher/), [MOD/Witcher_Font/](MOD/Witcher_Font/), [MOD/Witcher.mod](MOD/Witcher.mod) and [MOD/Witcher_Font.mod](MOD/Witcher_Font.mod) into Witcher_Kings_0.M.m.zip
+10. Zip [MOD/Witcher Kings/](MOD/Witcher Kings/), [MOD/Witcher_Font/](MOD/Witcher_Font/), [MOD/Witcher Kings.mod](MOD/Witcher Kings.mod) and [MOD/Witcher_Font.mod](MOD/Witcher_Font.mod) into Witcher_Kings_0.M.m.zip
 11. Generate the Windows installer:
 	1. Install [NSIS Unicode 2.46.5](https://code.google.com/p/unsis/downloads/list)
 	2. Right-click [MOD/setup.nsi](MOD/setup.nsi) and select "Compile Unicode NSIS Script"

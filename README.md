@@ -4,9 +4,9 @@
 
 For more info on mod features, check the [Witcher Kings wiki page](https://ck2.paradoxwikis.com/Witcher_Kings).
 
-Current "beta" for 3.3.x:
-
 * [Discord](https://discord.gg/Rh4fu6H7kM)
+
+Current "beta" for 3.3.x:
 
 * [Github](https://github.com/AureliusRexRegum/Witcher-Kings)
 
