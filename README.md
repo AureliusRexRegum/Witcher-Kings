@@ -6,6 +6,8 @@ For more info on mod features, check the [Witcher Kings wiki page](https://ck2.p
 
 Current "beta" for 3.3.x:
 
+* [Discord](https://discord.gg/Rh4fu6H7kM)
+
 * [Github](https://github.com/AureliusRexRegum/Witcher-Kings)
 
 
