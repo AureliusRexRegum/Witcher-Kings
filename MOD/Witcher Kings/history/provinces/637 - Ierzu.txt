@@ -1,0 +1,18 @@
+# c_ierzu
+
+# County Title
+title = c_ierzu
+
+# Settlements
+max_settlements = 4
+
+b_ierzu = castle
+b_duault = city
+b_vassejoux = temple
+#b_montfrat = castle
+
+# Misc
+culture = lyrian
+religion = melitele
+
+#History

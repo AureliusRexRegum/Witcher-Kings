@@ -1,0 +1,17 @@
+# c_kopys
+
+# County Title
+title = c_kopys
+
+# Settlements
+max_settlements = 3
+
+b_kopys = castle
+b_vasilyevo = city
+#b_kotlas = temple
+
+# Misc
+culture = kaedweni
+religion = melitele
+
+#History

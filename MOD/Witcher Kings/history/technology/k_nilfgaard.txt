@@ -1,0 +1,39 @@
+#NILFGAARD
+technology = {
+	titles = {
+		d_batavis
+		d_biehudlnie
+		d_corvaen
+		d_darn_dyffra
+		d_drachten
+		d_dyserth
+		d_edincus
+		d_eiddon
+		d_grootegast
+		d_maecht
+		d_medemblik
+		d_merchants_guild
+		d_namestkovanie
+		d_nilfgaard
+		d_oesterlen
+		d_pochlebenstvie
+		d_rocayne
+		d_rowan
+		d_rozvlazenie
+		d_siscaea
+		d_tecenie
+		d_teharstvie
+		d_thurn
+		d_ymlac
+	}
+	1200 = {
+		military = 0.5
+		economy = 1.0
+		culture = 1.0
+	}
+	1600 = {
+		military = 5.0
+		economy = 5.0
+		culture = 5.0
+	}
+}

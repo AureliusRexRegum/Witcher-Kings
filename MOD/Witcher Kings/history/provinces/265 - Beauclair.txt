@@ -1,0 +1,29 @@
+# c_beauclair
+
+# County Title
+title = c_beauclair
+
+# Settlements
+max_settlements = 6
+
+b_chateau_beauclair = castle
+b_beauclair = city
+b_chionvoie = city
+b_montou = temple
+b_breuile = city
+#b_mare = temple
+
+# Misc
+culture = toussaint
+religion = lebioda
+terrain = farmlands
+
+#History
+800.1.1 = {
+	build_wonder = wonder_palace # Beauclair Palace
+	set_wonder_stage = 1
+}
+
+1100.1.1 = {
+	set_wonder_stage = 2 # Renovated by Faramond
+}

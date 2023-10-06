@@ -1,0 +1,18 @@
+# c_deveys
+
+# County Title
+title = c_deveys
+
+# Settlements
+max_settlements = 4
+
+b_deveys = castle
+b_le_mans = city
+b_marambat = temple
+#b_merignae = castle
+
+# Misc
+culture = lyrian
+religion = melitele
+
+#History

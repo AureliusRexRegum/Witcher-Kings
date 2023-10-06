@@ -1,0 +1,28 @@
+# c_novigrad
+
+# County Title
+title = c_novigrad
+
+# Settlements
+max_settlements = 7
+
+b_novigrad = city
+b_gielda = castle
+b_barwice = temple
+b_bazar_zachodni = city
+b_teatrum = city
+b_targ_rybny = castle
+b_targ_drzewny = city
+
+# Misc
+culture = redanian
+religion = eternal_fire
+
+#History
+1000.1.1 = {
+	build_wonder = wonder_harbor
+	set_wonder_stage = 3
+	build_wonder_upgrade = upgrade_piers
+	build_wonder_upgrade = upgrade_office_harbor
+	build_wonder_upgrade = upgrade_tavern
+}

@@ -1,0 +1,18 @@
+# c_meyen
+
+# County Title
+title = c_meyen
+
+# Settlements
+max_settlements = 4
+
+b_meyen = castle
+b_merignaf = city
+b_molamboz = temple
+#b_villegaudin = castle
+
+# Misc
+culture = lyrian
+religion = melitele
+
+#History

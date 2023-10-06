@@ -1,0 +1,47 @@
+# 2 Songs of the Holy Land
+
+song = {
+	name = "ascalon.ogg"
+	song_name = "Ascalon"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.25
+			piety = 25
+		}
+		modifier = {
+			factor = 0
+			trait = cynical
+		}
+	}
+	volume = 0.45
+}
+
+
+
+song = {
+	name = "theholyland.ogg"
+	song_name = "The Holy Land"
+	
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 2
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.25
+			piety = 25
+		}
+		modifier = {
+			factor = 0
+			trait = cynical
+		}
+	}
+	volume = 0.45
+}

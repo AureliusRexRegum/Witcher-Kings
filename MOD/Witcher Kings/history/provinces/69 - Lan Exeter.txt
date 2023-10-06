@@ -1,0 +1,27 @@
+# c_lan_exeter
+
+# County Title
+title = c_lan_exeter
+
+# Settlements
+max_settlements = 6
+
+b_ensenad = castle
+b_thevsingen = temple
+b_lan_exeter = city
+b_krukle = castle
+#b_paupe = city
+#b_kalnuven = temple
+
+# Misc
+culture = koviri
+religion = lebioda
+
+#History
+1080.1.1 = {
+	build_wonder = wonder_university # University of Lan Exeter
+	set_wonder_stage = 1
+}
+1180.1.1 = {
+	set_wonder_stage = 2
+}

@@ -1,0 +1,305 @@
+decisions = {
+	convert_to_dwarf_religion = { # only dwarfs and halfdwarfs
+	
+		icon_religion = dwarven_religion
+		
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { religion = dwarven_religion }
+			OR = {
+				trait = halfdwarf_race
+				trait = dwarf_race
+			}
+		}
+		allow = {
+			NOT = { trait = zealous }
+			piety = 100
+		}
+		effect = {
+			if = {
+				limit = { higher_tier_than = BARON }
+				religion_authority = { modifier = ruler_converted_from }
+			}
+			religion = dwarven_religion
+			if = {
+				limit = { higher_tier_than = BARON }
+				hidden_tooltip = {
+					religion_authority = { modifier = ruler_converted_to }
+				}
+			}
+			piety = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+	
+	convert_to_dwarf_culture = { # only dwarfs and halfdwarfs
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { culture = dwarven }
+			OR = {
+				trait = halfdwarf_race
+				trait = dwarf_race
+			}
+		}
+		allow = {
+			prestige = 100
+		}
+		effect = {
+			culture = dwarven
+			prestige = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+	
+	convert_to_dana_meadbh_religion = { # only elfs and halfelfs
+		
+		icon_religion = dana_meadbh
+		
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { religion = dana_meadbh }
+			OR = {
+				trait = halfelf_race
+				trait = elf_race
+			}
+		}
+		allow = {
+			NOT = { trait = zealous }
+			piety = 100
+		}
+		effect = {
+			if = {
+				limit = { higher_tier_than = BARON }
+				religion_authority = { modifier = ruler_converted_from }
+			}
+			religion = dana_meadbh
+			if = {
+				limit = { higher_tier_than = BARON }
+				hidden_tooltip = {
+					religion_authority = { modifier = ruler_converted_to }
+				}
+			}
+			piety = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+	
+	convert_to_aen_seidhe_culture = { # only elfs and halfelfs
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { culture = aen_seidhe }
+			OR = {
+				trait = halfelf_race
+				trait = elf_race
+			}
+		}
+		allow = {
+			prestige = 100
+		}
+		effect = {
+			culture = aen_seidhe
+			prestige = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+
+	convert_to_halfling_religion = { # only halflings and halfhalflings
+		
+		icon_religion = halfling_religion
+		
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { religion = halfling_religion }
+			OR = {
+				trait = halfhalfling_race
+				trait = halfling_race
+			}
+		}
+		allow = {
+			NOT = { trait = zealous }
+			piety = 100
+		}
+		effect = {
+			if = {
+				limit = { higher_tier_than = BARON }
+				religion_authority = { modifier = ruler_converted_from }
+			}
+			religion = halfling_religion
+			if = {
+				limit = { higher_tier_than = BARON }
+				hidden_tooltip = {
+					religion_authority = { modifier = ruler_converted_to }
+				}
+			}
+			piety = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+
+	convert_to_halfling_culture = { # only halflings and halfhalflings
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { culture = halfling }
+			OR = {
+				trait = halfhalfling_race
+				trait = halfling_race
+			}
+		}
+		allow = {
+			prestige = 100
+		}
+		effect = {
+			culture = halfling
+			prestige = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+
+	convert_to_gnome_religion = { # only gnomes and halfgnomes
+	
+		icon_religion = gnomish_religion
+		
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { religion = gnomish_religion }
+			OR = {
+				trait = halfgnome_race
+				trait = gnome_race
+			}
+		}
+		allow = {
+			NOT = { trait = zealous }
+			piety = 100
+		}
+		effect = {
+			if = {
+				limit = { higher_tier_than = BARON }
+				religion_authority = { modifier = ruler_converted_from }
+			}
+			religion = gnomish_religion
+			if = {
+				limit = { higher_tier_than = BARON }
+				hidden_tooltip = {
+					religion_authority = { modifier = ruler_converted_to }
+				}
+			}
+			piety = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+	
+	convert_to_gnome_culture = { # only gnomes and halfgnomes
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { culture = gnomish }
+			OR = {
+				trait = halfgnome_race
+				trait = gnome_race
+			}
+		}
+		allow = {
+			prestige = 100
+		}
+		effect = {
+			culture = gnomish
+			prestige = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+
+	convert_to_dryad_religion = { # only dryads
+	
+		icon_religion = dryad_religion
+		
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { religion = dryad_religion }
+			trait = dryad_race
+		}
+		allow = {
+			NOT = { trait = zealous }
+			piety = 100
+		}
+		effect = {
+			if = {
+				limit = { higher_tier_than = BARON }
+				religion_authority = { modifier = ruler_converted_from }
+			}
+			religion = dryad_religion
+			if = {
+				limit = { higher_tier_than = BARON }
+				hidden_tooltip = {
+					religion_authority = { modifier = ruler_converted_to }
+				}
+			}
+			piety = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+	
+	convert_to_dryad_culture = { # only dryads
+		potential = {
+			NOT = { culture = wilderness }
+			NOT = { culture = dryad }
+			trait = dryad_race
+		}
+		allow = {
+			prestige = 100
+		}
+		effect = {
+			culture = dryad
+			prestige = -100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+}

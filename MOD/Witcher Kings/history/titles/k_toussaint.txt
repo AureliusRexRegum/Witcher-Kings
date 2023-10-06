@@ -1,0 +1,18 @@
+500.1.1={
+	law = cognatic_succession
+	law = succ_gavelkind
+}
+
+1200.1.1={
+	liege=e_nilfgaard
+	effect = { set_coa = k_toussaint_nilfgaard }
+}
+1202.1.1 = {
+	holder = 120005
+}
+1247.1.1 = {
+	holder = 120006
+}
+1260.1.1={
+	holder=120000
+}

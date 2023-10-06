@@ -1,0 +1,32 @@
+######################################
+# Scripted Triggers for Africa content
+######################################
+
+trans_saharan_trade_post_trigger = {
+	custom_tooltip = {
+		text = trans_saharan_province_desc
+		hidden_tooltip = {
+			always = no
+		}
+	}
+}
+
+trans_saharan_trade_post_market_trigger = {
+	always = no
+}
+
+trans_saharan_trade_post_gold_mine_trigger = {
+	always = no
+}
+
+trans_saharan_trade_post_salt_mine_trigger = {
+	always = no
+}
+
+has_trans_saharan_gold_mine = {
+	OR = {
+		trade_post_has_building = tr_gold_mine_1
+		trade_post_has_building = tr_gold_mine_2
+		trade_post_has_building = tr_gold_mine_3
+	}
+}

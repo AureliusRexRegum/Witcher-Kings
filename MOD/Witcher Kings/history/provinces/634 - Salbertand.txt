@@ -1,0 +1,18 @@
+# c_salbertand
+
+# County Title
+title = c_salbertand
+
+# Settlements
+max_settlements = 4
+
+b_salbertand = castle
+b_cressat = city
+b_beugneux = temple
+#b_chassat = castle
+
+# Misc
+culture = lyrian
+religion = melitele
+
+#History

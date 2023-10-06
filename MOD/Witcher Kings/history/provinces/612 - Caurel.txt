@@ -1,0 +1,18 @@
+# c_caurel
+
+# County Title
+title = c_caurel
+
+# Settlements
+max_settlements = 4
+
+b_caurel = castle
+b_manne = city
+b_buxy = temple
+#b_laboutant = castle
+
+# Misc
+culture = aedirnian
+religion = melitele
+
+#History

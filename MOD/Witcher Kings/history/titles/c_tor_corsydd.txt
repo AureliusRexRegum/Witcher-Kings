@@ -1,0 +1,12 @@
+500.1.1={
+	law = succ_open_elective
+}
+800.1.1={
+	liege=k_temeria
+}
+1150.1.1={
+	holder = 155007
+}
+1274.11.15 = {
+	holder = 1
+}

@@ -1,0 +1,18 @@
+# c_wittring
+
+# County Title
+title = c_wittring
+
+# Settlements
+max_settlements = 4
+
+b_wittring = castle
+b_genouillac = city
+b_cany = temple
+#b_orgenoy = castle
+
+# Misc
+culture = aedirnian
+religion = melitele
+
+#History

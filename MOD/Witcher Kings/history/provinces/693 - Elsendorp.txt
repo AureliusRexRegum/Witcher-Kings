@@ -1,0 +1,18 @@
+# c_elsendorp
+
+# County Title
+title = c_elsendorp
+
+# Settlements
+max_settlements = 4
+
+b_elsendorp = castle
+b_barsanges = city
+#b_bormes = temple
+#b_basroucheix = castle
+
+# Misc
+culture = nilfgaardian
+religion = solar
+
+#History

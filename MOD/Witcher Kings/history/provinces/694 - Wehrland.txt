@@ -1,0 +1,18 @@
+# c_wehrland
+
+# County Title
+title = c_wehrland
+
+# Settlements
+max_settlements = 4
+
+b_wehrland = castle
+b_arzon = city
+#b_richebourg = temple
+#b_tignac = castle
+
+# Misc
+culture = nilfgaardian
+religion = solar
+
+#History

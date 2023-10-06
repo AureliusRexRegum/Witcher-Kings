@@ -1,0 +1,18 @@
+# c_luttelgeest
+
+# County Title
+title = c_luttelgeest
+
+# Settlements
+max_settlements = 4
+
+b_luttelgeest = castle
+b_chassiers = city
+#b_chaillol = temple
+#b_cognet = castle
+
+# Misc
+culture = nilfgaardian
+religion = solar
+
+#History

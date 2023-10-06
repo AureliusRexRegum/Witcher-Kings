@@ -1,0 +1,36 @@
+################################################
+# LIFESTYLE
+################################################
+# Note: add new traits to remove_lifestyle_trait_effect
+alchemist = {
+	lifestyle = yes
+	
+	intrigue = 1
+	learning = 2
+	
+	combat_rating = -5
+	
+	same_opinion = 5
+}
+craftsman = {
+	lifestyle = yes
+	
+	potential = {
+		OR = {
+			culture = dwarven
+			culture = gnomish
+		}
+	}
+	
+	martial = 1
+	stewardship = 2
+	
+	same_opinion = 5
+}
+fisher = {
+	lifestyle = yes
+	
+	diplomacy = 2
+	
+	same_opinion = 5
+}

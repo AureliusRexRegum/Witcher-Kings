@@ -1,0 +1,68 @@
+namespace = meta
+
+# Invalid checksum warning [on_chronicle_start]
+#narrative_event = {
+#	id = meta.1
+#	desc = meta.1.desc
+#	title = meta.1.title
+#	picture = GFX_evt_comet
+#	border = GFX_event_narrative_frame_war
+#	
+#	is_triggered_only = yes
+#	
+#	only_playable = yes
+#	ai = no
+#	
+#	trigger = {
+#		has_game_rule = {
+#			name = supported_checksum
+#			value = on
+#		}
+#		supported_checksum = no
+#	}
+#	
+#	option = {
+#		name = OK
+#	}
+#}
+
+# Save conversion [on_startup]
+character_event = {
+	id = meta.2
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+}
+
+# Workaround for barons under generated counts being independent [on_startup]
+# See https://forum.paradoxplaza.com/forum/index.php?threads/mod-problems-independent-baronies-and-frames.1056827
+character_event = {
+	id = meta.3
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	# Note: can't use only_independent = yes, as barons are not only_playable = yes
+	only_rulers = yes
+	
+	trigger = {
+		tier = BARON
+		independent = yes
+	}
+	
+	immediate = {
+		log = "(Startup) Auto-fixing independent barony [Root.PrimaryTitle.GetFullBaseName]."
+		dejure_liege_title = {
+			holder_scope = {
+				ROOT = {
+					set_defacto_liege = PREV
+				}
+			}
+		}
+	}
+}
+
+

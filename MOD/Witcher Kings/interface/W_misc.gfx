@@ -1,0 +1,23 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_blank"
+		texturefile = "gfx\\interface\\blank.dds"
+		noOfFrames = 1
+	}
+	
+	spriteType = {
+		name = "GFX_action_study_magic"
+		texturefile = "gfx\\interface\\job_study_magic.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_era_witcher2"
+		texturefile = "gfx\\interface\\era_witcher2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_wilderness_government"
+		texturefile = "gfx\\interface\\blank.dds"
+	}
+}

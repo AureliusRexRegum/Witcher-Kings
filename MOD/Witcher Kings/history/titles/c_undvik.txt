@@ -1,0 +1,20 @@
+500.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1080.1.1={
+	liege=k_skellig
+}
+
+1000.1.1={holder=35900} #Modolf[7004]
+
+1254.1.1={holder=36200} #Harald[7007]
+
+1274.1.1 = {
+	holder = 1 # Ice giant Myrhyff
+	effect = {
+		location = {
+			add_province_modifier = { name = giants duration = -1 }
+		}
+	}
+}

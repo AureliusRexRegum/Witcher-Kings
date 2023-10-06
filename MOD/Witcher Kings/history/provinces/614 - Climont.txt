@@ -1,0 +1,18 @@
+# c_climont
+
+# County Title
+title = c_climont
+
+# Settlements
+max_settlements = 4
+
+b_climont = castle
+b_veysset = city
+b_cheppy = temple
+#b_peyrafon = castle
+
+# Misc
+culture = aedirnian
+religion = melitele
+
+#History

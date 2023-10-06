@@ -1,0 +1,6 @@
+1269.1.1={
+	active = yes
+	de_jure_liege = k_kaedwen
+	liege = k_kaedwen
+	holder = 155401
+}

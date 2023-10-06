@@ -1,0 +1,65 @@
+From;To;Type;Through;-1;-1;-1;-1;Comment
+557;72;sea;431;-1;-1;-1;-1;Iskarta-Inis Porhoet
+71;72;sea;431;-1;-1;-1;-1;Skordh-Inis Porhoet
+556;560;sea;427;-1;-1;-1;-1;Cubele-Azunere
+16;25;sea;433;-1;-1;-1;-1;Thanedd-Gors Velen
+26;412;sea;413;-1;-1;-1;-1;Acorn Bay-Wieczny Ogien
+26;64;sea;413;-1;-1;-1;-1;Acorn Bay-Novigrad
+149;393;sea;480;-1;-1;-1;-1;Nastrog-Tor Byd
+644;145;sea;421;-1;-1;-1;-1;Kaer Muir-Faroe
+644;148;sea;421;-1;-1;-1;-1;Kaer Muir-Undvik
+647;147;sea;421;-1;-1;-1;-1;Gedyneith-Hindarsfjall
+647;146;sea;421;-1;-1;-1;-1;Gedyneith-An Skellig
+645;144;sea;421;-1;-1;-1;-1;Kaer Trolde-Spikeroog
+552;83;major_river;477;-1;-1;-1;-1;Kielionys-Derwayn
+48;61;major_river;454;-1;-1;-1;-1;Blaviken-Crinfrid
+48;536;major_river;454;-1;-1;-1;-1;Blaviken-Krotosyn
+44;512;major_river;451;-1;-1;-1;-1;Oxenfurt-Findetann
+11;548;major_river;450;-1;-1;-1;-1;White Bridge-Rypin
+96;617;major_river;447;-1;-1;-1;-1;Artiom-Bilkbos
+25;26;major_river;478;-1;-1;-1;-1;Gors Velen-Acorn Bay
+25;512;major_river;478;-1;-1;-1;-1;Gors Velen-Findetann
+21;14;major_river;478;-1;-1;-1;-1;Anchor-Nessvelt
+13;14;major_river;478;-1;-1;-1;-1;La Valette-Nessvelt
+149;345;major_river;456;-1;-1;-1;-1;Nastrog-Cintra
+150;347;major_river;456;-1;-1;-1;-1;Schwemmland-Cottbus
+151;347;major_river;456;-1;-1;-1;-1;Bodrog-Cottbus
+29;352;major_river;457;-1;-1;-1;-1;Dillingen-Strept
+33;523;major_river;458;-1;-1;-1;-1;Vidort-Sauris
+35;41;major_river;459;-1;-1;-1;-1;Groundcherry Woods-Kagen
+332;290;major_river;473;-1;-1;-1;-1;Suþrima-Arndare
+332;291;major_river;473;-1;-1;-1;-1;Suþrima-Athenry
+296;297;major_river;474;-1;-1;-1;-1;Neunreuth-Geoghegan
+298;297;major_river;474;-1;-1;-1;-1;Rathkeale-Geoghegan
+298;299;major_river;475;-1;-1;-1;-1;Rathkeale-Dungarvan
+298;282;major_river;475;-1;-1;-1;-1;Rathkeale-Cadlock
+298;321;major_river;476;-1;-1;-1;-1;Rathkeale-Hwitefyl
+246;306;major_river;461;-1;-1;-1;-1;Tengelic-Kerntar
+246;307;major_river;461;-1;-1;-1;-1;Tengelic-Breffny
+759;307;major_river;461;-1;-1;-1;-1;Etyek-Breffny
+759;305;major_river;462;-1;-1;-1;-1;Etyek-Forgeham
+262;305;major_river;462;-1;-1;-1;-1;Fano-Forgeham
+260;305;major_river;462;-1;-1;-1;-1;Claremnot-Forgeham
+260;278;major_river;463;-1;-1;-1;-1;Claremnot-Kiltartan
+260;309;major_river;463;-1;-1;-1;-1;Claremnot-Tallaght
+356;309;major_river;463;-1;-1;-1;-1;Loredo-Tallaght
+311;358;major_river;464;-1;-1;-1;-1;Caravista-Teiza
+311;356;major_river;464;-1;-1;-1;-1;Caravista-Loredo
+248;217;major_river;470;-1;-1;-1;-1;Monostora-Omacus
+252;216;major_river;470;-1;-1;-1;-1;Urkut-Edincus
+252;219;major_river;470;-1;-1;-1;-1;Urkut-Siscaea
+219;760;major_river;471;-1;-1;-1;-1;Siscaea-Kyparissia
+219;230;major_river;471;-1;-1;-1;-1;Siscaea-Dudno
+220;230;major_river;471;-1;-1;-1;-1;Rigomagus-Dudno
+220;229;major_river;471;-1;-1;-1;-1;Rigomagus-Radboud
+732;229;major_river;472;-1;-1;-1;-1;Petuaria-Radboud
+239;201;major_river;472;-1;-1;-1;-1;Grootegast-Oplyvanje
+239;200;major_river;472;-1;-1;-1;-1;Grootegast-Sulfragan
+167;166;major_river;466;-1;-1;-1;-1;Arvy-Tarnhann
+692;176;major_river;466;-1;-1;-1;-1;Gabey-Canten
+175;703;major_river;466;-1;-1;-1;-1;Loc Grim-Tydfil
+175;187;major_river;467;-1;-1;-1;-1;Loc Grim-Morfa Bychan
+688;187;major_river;467;-1;-1;-1;-1;Batria-Morfa Bychan
+688;188;major_river;467;-1;-1;-1;-1;Batria-Aberystwyth
+170;188;major_river;468;-1;-1;-1;-1;Ymlac-Aberystwyth
+184;182;major_river;469;-1;-1;-1;-1;Morteisen-Tir Chonnaill

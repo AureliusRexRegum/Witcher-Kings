@@ -1,0 +1,72 @@
+theocracy_governments = {
+
+	theocracy_government = {
+		preferred_holdings = { TEMPLE }
+		allowed_holdings = {
+			TEMPLE
+			CASTLE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		accepts_liege_governments = {
+			feudal_government
+			republic_government
+			merchant_republic_government
+			theocratic_feudal_government
+		}
+		frame_suffix = "_theocracy"
+		title_prefix = "temple_"
+		potential = {
+			NOT = { 
+				has_landed_title = d_wilderness
+				has_landed_title = d_thanedd
+				has_landed_title = d_ban_ard_academy
+				has_landed_title = d_nilfgaard_magic_academy
+                has_landed_title = d_wilderness 
+                has_landed_title = c_tor_corsydd
+                has_landed_title = c_tor_irion
+                has_landed_title = c_tor_cigfrain
+                has_landed_title = c_tor_istredd
+                has_landed_title = c_tor_tango
+                has_landed_title = c_tor_maen
+                has_landed_title = c_ty_yennefer
+                has_landed_title = c_tor_siriol
+                has_landed_title = c_tor_melyn
+                has_landed_title = c_tor_byd
+                has_landed_title = c_tor_lledrith
+                has_landed_title = c_tor_zireael
+                has_landed_title = c_tor_llew
+                has_landed_title = c_tor_xarthisius
+                has_landed_title = c_tor_gvalchca
+                has_landed_title = c_tor_aenye
+			}
+			holy_order = no
+			is_patrician = no
+			OR = {
+				is_female = no
+				religion_allows_female_temple_holders = yes
+			}
+			OR = {
+				is_female = yes
+				religion_allows_male_temple_holders = yes
+			}
+		}
+		
+		color = { 220 220 220 }
+		
+		can_create_kingdoms = no
+		have_gender_laws = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+
+		can_build_tribal = no
+		
+		capital_move_delay = 600
+	}
+	
+}

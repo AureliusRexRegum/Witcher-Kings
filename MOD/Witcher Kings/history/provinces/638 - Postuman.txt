@@ -1,0 +1,18 @@
+# c_postuman
+
+# County Title
+title = c_postuman
+
+# Settlements
+max_settlements = 4
+
+b_postuman = castle
+b_cintegabelle = city
+b_hoymille = temple
+#b_clion = castle
+
+# Misc
+culture = lyrian
+religion = melitele
+
+#History

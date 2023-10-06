@@ -1,0 +1,35 @@
+# c_nilfgaard
+
+# County Title
+title = c_nilfgaard
+
+# Settlements
+max_settlements = 7
+
+b_imperial_palace = castle
+b_nilfgaard = city
+b_feeghs = city
+b_graupian = castle
+b_nilfgaard_magic_academy = temple
+b_banagher = city
+#b_gwyngyll = castle
+
+# Misc
+culture = nilfgaardian
+religion = solar
+
+#History
+1000.1.1 = {
+	build_wonder = wonder_palace # Imperial Palace
+	set_wonder_stage = 2
+	build_wonder_upgrade = upgrade_royal_bedchamber
+	build_wonder_upgrade = upgrade_trap_door
+	build_wonder_upgrade = upgrade_golden_throne
+}
+1080.1.1 = {
+	b_nilfgaard = ct_university_1
+	b_nilfgaard = ct_university_2
+	b_nilfgaard = ct_university_3
+	b_nilfgaard_magic_academy = tp_nilfgaard_magic_academy
+	b_graupian = ca_military_academy
+}

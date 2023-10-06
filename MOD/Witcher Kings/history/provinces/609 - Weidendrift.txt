@@ -1,0 +1,18 @@
+# c_weidendrift
+
+# County Title
+title = c_weidendrift
+
+# Settlements
+max_settlements = 4
+
+b_weidendrift = castle
+b_abeville = city
+b_villeflambeau = temple
+#b_mazabrard = castle
+
+# Misc
+culture = aedirnian
+religion = melitele
+
+#History

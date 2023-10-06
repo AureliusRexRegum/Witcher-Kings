@@ -1,0 +1,287 @@
+decisions = {
+	
+	employ_spy = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { culture = wilderness }
+			is_ruler = yes
+			OR = {
+				ai = no
+				higher_tier_than = count
+			}
+		}
+		allow = {
+			scaled_wealth = 0.2
+		}
+		effect = {
+			scaled_wealth = -0.2
+			if = {
+				limit = { trait = elf_race }
+				create_random_intriguer = {
+					random_traits = yes
+					dynasty = random
+					age = 60 # set age for long-lived races
+				}
+			}
+			if = {
+				limit = { NOT = { trait = elf_race } }
+				create_random_intriguer = {
+					random_traits = yes
+					dynasty = random
+				}
+			}
+			new_character = {
+				change_intrigue = 2
+				remove_trait = inbred
+				remove_trait = imbecile
+			}
+			if = {
+				limit = { trait = elf_race }
+				new_character = {
+					add_trait = elf_race
+				}
+			}
+			if = {
+				limit = { NOT = { trait = elf_race } }
+				new_character = {
+					character_event = { id = racial.1 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { scaled_wealth = 0.6 }
+			}
+			modifier = {
+				factor = 0
+				job_spymaster = {
+					intrigue = 10
+				}
+			}
+			modifier = {
+				factor = 0
+				any_vassal = {
+					intrigue = 10
+					age = 15
+					prisoner = no
+					NOT = { trait = incapable }
+				}
+			}
+			modifier = {
+				factor = 0
+				any_courtier = {
+					intrigue = 10
+					age = 15
+					prisoner = no
+					NOT = { trait = incapable }
+				}
+			}
+		}
+	}
+	
+	employ_diplomat = {
+		only_rulers = yes
+		
+		potential = {
+			NOT = { culture = wilderness }
+			is_ruler = yes
+			OR = {
+				ai = no
+				higher_tier_than = count
+			}
+		}
+		allow = {
+			scaled_wealth = 0.2
+		}
+		effect = {
+			scaled_wealth = -0.2
+			if = {
+				limit = { trait = elf_race }
+				create_random_diplomat = {
+					random_traits = yes
+					dynasty = random
+					age = 60 # set age for long-lived races
+				}
+			}
+			if = {
+				limit = { NOT = { trait = elf_race } }
+				create_random_diplomat = {
+					random_traits = yes
+					dynasty = random
+					female = no
+				}
+			}
+			new_character = {
+				change_diplomacy = 2
+				remove_trait = inbred
+				remove_trait = imbecile
+			}
+			if = {
+				limit = { trait = elf_race }
+				new_character = {
+					add_trait = elf_race
+				}
+			}
+			if = {
+				limit = { NOT = { trait = elf_race } }
+				new_character = {
+					character_event = { id = racial.1 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { scaled_wealth = 0.6 }
+			}
+			modifier = {
+				factor = 0
+				job_chancellor = {
+					diplomacy = 10
+				}
+			}
+			modifier = {
+				factor = 0
+				any_vassal = {
+					diplomacy = 10
+					is_female = no
+					age = 15
+					prisoner = no
+					NOT = { trait = incapable }
+				}
+			}
+			modifier = {
+				factor = 0
+				any_courtier = {
+					diplomacy = 10
+					is_female = no
+					age = 15
+					prisoner = no
+					NOT = { trait = incapable }
+				}
+			}
+		}
+	}
+	
+	employ_witcher = {
+		is_high_prio = yes
+		
+		only_rulers = yes
+		
+		potential = {
+			NOT = { culture = wilderness }
+			is_ruler = yes
+			OR = {
+				ai = no
+				higher_tier_than = count
+			}
+			witcher = { 
+				is_alive = yes
+			}
+			any_demesne_province = { 
+				OR = {
+					has_province_modifier = vampires
+					has_province_modifier = werewolves
+					has_province_modifier = kikimoras
+					has_province_modifier = hellhounds
+					has_province_modifier = rotfiends
+					has_province_modifier = drowners
+					has_province_modifier = nekkers
+				}
+			}
+		}
+		allow = {
+			NOT = { any_courtier = { trait = witcher } }
+			wealth = 10
+			custom_tooltip = {
+				text = already_invited_witcher
+				hidden_tooltip = {
+					NOT = { has_character_flag = invited_witcher }
+				}
+			}
+		}
+		effect = {
+			wealth = -10
+			set_character_flag = invited_witcher
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 trait = racist }
+			modifier = { factor = 0 NOT = { scaled_wealth = 1.0 } }
+		}
+	}
+	
+	employ_sorcerer = {
+		is_high_prio = yes
+		
+		only_rulers = yes
+		
+		potential = {
+			NOT = { culture = wilderness }
+			is_ruler = yes
+			mercenary = no
+			NOT = { any_demesne_province = { terrain = magic_tower } }
+			location = { region = world_the_north }
+			NOT = { top_liege = { primary_title = { title = e_nilfgaard } } }
+			OR = {
+				ai = no
+				higher_tier_than = count
+			}
+			OR = {
+				b_aretuza = {
+					holder_scope = {
+						any_courtier = {
+							trait = sorcerer
+							is_adult = yes
+							NOT = { any_ward = { always = yes } }
+							is_ruler = no
+						}
+					}
+				}
+				b_akademia = {
+					holder_scope = {
+						any_courtier = {
+							trait = sorcerer
+							is_adult = yes
+							NOT = { any_ward = { always = yes } }
+							is_ruler = no
+						}
+					}
+				}
+			}
+			NOT = { any_courtier = { trait = sorcerer } }
+			NOT = { any_vassal = { trait = sorcerer } }
+		}
+		allow = {
+			scaled_wealth = 1.0
+			NOT = { any_courtier = { trait = sorcerer } }
+			NOT = { any_vassal = { trait = sorcerer } }
+		}
+		effect = {
+			scaled_wealth = -1.0
+			hidden_tooltip = { character_event = { id = magic.1000 } }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { 
+				factor = 0 
+				NOT = { scaled_wealth = 2.0 }
+			}
+			
+			modifier = { 
+				factor = 10
+				tier = king
+			}
+			modifier = { 
+				factor = 5
+				independent = yes
+			}
+		}
+	}
+}

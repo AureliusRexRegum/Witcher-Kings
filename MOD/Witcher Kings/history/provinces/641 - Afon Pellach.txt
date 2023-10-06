@@ -1,0 +1,18 @@
+# c_afon_pellach
+
+# County Title
+title = c_afon_pellach
+
+# Settlements
+max_settlements = 4
+
+b_afon_pellach = castle
+b_mernel = city
+b_montrottier = temple
+#b_mennessis = castle
+
+# Misc
+culture = lyrian
+religion = melitele
+
+#History

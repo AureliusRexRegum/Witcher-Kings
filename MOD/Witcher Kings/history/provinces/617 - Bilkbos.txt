@@ -1,0 +1,18 @@
+# c_bilkbos
+
+# County Title
+title = c_bilkbos
+
+# Settlements
+max_settlements = 4
+
+b_bilkbos = castle
+b_sinhalac = city
+b_mazuby = temple
+#b_plussulien = castle
+
+# Misc
+culture = dwarven
+religion = dwarven_religion
+
+#History

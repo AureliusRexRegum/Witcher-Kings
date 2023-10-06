@@ -1,0 +1,18 @@
+# c_pallandt
+
+# County Title
+title = c_pallandt
+
+# Settlements
+max_settlements = 4
+
+b_pallandt = castle
+b_montrejeau = city
+b_nolats = temple
+#b_bossey = castle
+
+# Misc
+culture = aen_seidhe
+religion = dana_meadbh
+
+#History

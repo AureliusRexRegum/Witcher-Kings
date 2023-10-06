@@ -1,0 +1,18 @@
+# c_airel
+
+# County Title
+title = c_airel
+
+# Settlements
+max_settlements = 4
+
+b_airel = castle
+b_passeirier = city
+b_durance = temple
+#b_flaviac = castle
+
+# Misc
+culture = aedirnian
+religion = melitele
+
+#History

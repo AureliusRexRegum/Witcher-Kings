@@ -1,0 +1,27 @@
+# c_wyzima
+
+# County Title
+title = c_wyzima
+
+# Settlements
+max_settlements = 7
+
+b_wyzima_castle = castle
+b_wyzima = city
+b_temple_quarter = temple
+b_aerzen = castle
+b_baldeney = city
+#b_wyzima_2 = temple
+#b_wyzima_3 = castle
+
+# Misc
+culture = temerian
+religion = melitele
+
+#History
+1273.1.1= {
+	build_wonder = wonder_palace
+	set_wonder_stage = 2
+	build_wonder_upgrade = upgrade_stained_glass_window
+}
+

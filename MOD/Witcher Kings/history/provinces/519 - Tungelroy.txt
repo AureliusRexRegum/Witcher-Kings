@@ -1,0 +1,18 @@
+# c_tungelroy
+
+# County Title
+title = c_tungelroy
+
+# Settlements
+max_settlements = 4
+
+b_tungelroy = castle
+b_lavignole = city
+#b_brandillon = temple
+#b_moyvillers = castle
+
+# Misc
+culture = aedirnian
+religion = melitele
+
+#History

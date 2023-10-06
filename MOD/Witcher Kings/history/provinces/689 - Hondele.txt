@@ -1,0 +1,17 @@
+# c_hondele
+
+# County Title
+title = c_hondele
+
+# Settlements
+max_settlements = 3
+
+b_hondele = castle
+b_sainville = city
+#b_omelmont = temple
+
+# Misc
+culture = nilfgaardian
+religion = solar
+
+#History

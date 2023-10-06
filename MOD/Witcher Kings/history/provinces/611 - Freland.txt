@@ -1,0 +1,18 @@
+# c_freland
+
+# County Title
+title = c_freland
+
+# Settlements
+max_settlements = 4
+
+b_freland = castle
+b_bousies = city
+b_orcinas = temple
+#b_chapdes = castle
+
+# Misc
+culture = aedirnian
+religion = melitele
+
+#History

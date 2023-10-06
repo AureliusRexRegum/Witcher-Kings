@@ -1,0 +1,12 @@
+500.1.1={
+	law = succ_open_elective
+}
+
+1.1.1 = {
+	holder = 1
+}
+
+1275.1.1 = {
+	holder = 155013
+	liege = e_nilfgaard
+}

@@ -1,0 +1,8 @@
+# Wilderness dynasties        30001
+
+30001 = {
+	name = "Wilderness"
+	culture = wilderness
+	religion = wilderness
+	used_for_random = no
+}

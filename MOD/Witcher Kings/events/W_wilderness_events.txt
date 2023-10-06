@@ -1,0 +1,330 @@
+namespace = wilderness
+
+################################################
+# Main
+################################################
+# Hidden - Remove wilderness character traits
+# Except racial trait, as they would be added back the next day
+character_event = {
+	id = wilderness.1
+	
+	hide_window = yes
+	
+	culture = wilderness
+	
+	trigger = {
+		num_of_traits = 2
+	}
+	
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	immediate = {
+		clear_wealth = yes
+	}
+	
+	option = {
+		name = OK
+		remove_education_effect = yes
+		remove_lifestyle_trait_effect = yes
+		remove_personality_trait_effect = yes
+		remove_congenital_trait_effect = yes
+		remove_health_trait_effect = yes
+		remove_leadership_trait_effect = yes
+		
+		remove_trait = adept
+		remove_trait = ambidextrous
+		remove_trait = ashari
+		remove_trait = augustus
+		remove_trait = bad_priest_aztec
+		remove_trait = bad_priest_christian
+		remove_trait = bad_priest_muslim
+		remove_trait = bad_priest_norse
+		remove_trait = bad_priest_tengri
+		remove_trait = bad_priest_zoroastrian
+		remove_trait = bastard
+		remove_trait = berserker
+		remove_trait = blinded
+		remove_trait = born_in_the_purple
+		remove_trait = canon
+		remove_trait = child_of_consort
+		remove_trait = crusader
+		remove_trait = druid
+		remove_trait = eunuch
+		remove_trait = excommunicated
+		remove_trait = falconer
+		remove_trait = faqih
+		remove_trait = fertile_nonhuman
+		remove_trait = fertile_sorcerer
+		remove_trait = hafiz
+		remove_trait = hajjaj
+		#remove_trait = heresiarch
+		remove_trait = homosexual
+		remove_trait = is_fat
+		remove_trait = is_malnourished
+		remove_trait = kinslayer
+		remove_trait = legit_bastard
+		remove_trait = magic_talent
+		remove_trait = master_warrior
+		remove_trait = mirza
+		remove_trait = monk
+		remove_trait = mujahid
+		remove_trait = mutazilite
+		remove_trait = nun
+		remove_trait = on_hajj
+		remove_trait = on_pilgrimage
+		#remove_trait = peasant_leader
+		remove_trait = pilgrim
+		remove_trait = poet
+		remove_trait = poor_warrior
+		remove_trait = pregnant
+		remove_trait = shrewd
+		remove_trait = raider
+		remove_trait = saoshyant
+		remove_trait = saoshyant_descendant
+		remove_trait = sayyid
+		remove_trait = scarred
+		#remove_trait = scoiatael_leader
+		remove_trait = skilled_warrior
+		remove_trait = sorcerer
+		remove_trait = source
+		remove_trait = strong_emperor
+		remove_trait = sympathy_christendom
+		remove_trait = sympathy_islam
+		remove_trait = sympathy_judaism
+		remove_trait = sympathy_pagans
+		remove_trait = sympathy_zoroastrianism
+		remove_trait = trained_warrior
+		remove_trait = trickster
+		remove_trait = twin
+		remove_trait = varangian
+		remove_trait = veteran
+		remove_trait = viking
+		remove_trait = feeble
+		remove_trait = witcher
+		remove_trait = imperialist
+		remove_trait = solarist
+	}
+}
+
+# Give diplomatic immunity [on_startup]
+character_event = {
+	id = wilderness.2
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	culture = wilderness
+	
+	trigger = {
+	}
+	
+	immediate = {
+		diplomatic_immunity = yes
+		
+		# Prevent wilderness from being able to join coalitions
+		prestige = -100
+		piety = -100
+		clear_wealth = yes
+	}
+}
+
+# Remove Wilderness courtiers in other courts
+character_event = {
+	id = wilderness.3
+	
+	culture = wilderness
+	
+	trigger = {
+		is_ruler = no
+		host = {
+			NOT = { character = 1 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 0.001
+	}
+	
+	immediate = {
+		log = "**(Wilderness)** Killing [Root.GetBestName]([This.GetID]) that is not in wilderness court"
+		death = { death_reason = death_missing } 
+	}
+}
+
+################################################
+# Magic towers
+################################################
+# Hidden - Give tower to wilderness (on_death)
+character_event = {
+	id = wilderness.100
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		any_demesne_province = { terrain = magic_tower }
+		NOT = { has_landed_title = d_thanedd }
+		NOT = { has_landed_title = d_ban_ard_academy }
+		NOT = { has_landed_title = d_nilfgaard_magic_academy }
+	}
+	
+	option = {
+		name = OK
+		d_wilderness = {
+			holder_scope = {
+				ROOT = {
+					any_demesne_title = {
+						limit = {
+							tier = count
+							location = { terrain = magic_tower }
+						}
+						log = "**(Magic tower)** [Root.GetBestName]'s tower [This.GetName] is transfered to Wilderness on death"
+						gain_title = PREVPREV
+					}
+				}
+				set_defacto_liege = THIS
+			}
+		}
+	}
+}
+# Hidden - Give non-sorcerer held tower to wilderness 
+province_event = {
+	id = wilderness.101
+	
+	hide_window = yes
+	
+	trigger = {
+		terrain = magic_tower
+		owner = {
+			NOT = { has_landed_title = d_wilderness }
+			NOT = { trait = sorcerer }
+			NOR = { 
+				has_landed_title = d_thanedd
+				has_landed_title = d_ban_ard_academy
+				has_landed_title = d_nilfgaard_magic_academy
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	option = {
+		name = OK
+		log = "**(Magic tower)** [Root.County.Holder.GetBestName]([This.GetID]) cannot hold [Root.County.GetName], which is transfered to Wilderness"
+		d_wilderness = {
+			holder_scope = {
+				ROOT = {
+					owner = {
+						any_demesne_title = {
+							limit = {
+								tier = count
+								location = { terrain = magic_tower }
+							}
+							gain_title = PREVPREVPREV
+						}
+					}
+				}
+				set_defacto_liege = THIS
+			}
+		}
+	}
+}
+# Hidden - Change accidently spread magic culture
+character_event = {
+	id = wilderness.102
+	
+	hide_window = yes
+	
+	culture = magic
+	
+	trigger = {
+		
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # to elven culture
+		name = OK
+		trigger = {
+			trait = elf_race
+		}
+		culture = aen_seidhe
+		ai_chance = { factor = 100 }
+	}
+	option = { # to dwarven culture
+		name = OK
+		trigger = {
+			trait = dwarf_race
+		}
+		culture = dwarven
+		ai_chance = { factor = 100 }
+	}
+	option = { # to halfling culture
+		name = OK
+		trigger = {
+			trait = halfling_race
+		}
+		culture = halfling
+		ai_chance = { factor = 100 }
+	}
+	option = { # to gnomish culture
+		name = OK
+		trigger = {
+			trait = gnome_race
+		}
+		culture = gnomish
+		ai_chance = { factor = 100 }
+	}
+	option = { # to liege's culture
+		name = OK
+		trigger = {
+			liege = { 
+				NOT = { culture = magic }
+			}
+		}
+		liege = { reverse_culture = ROOT }
+		ai_chance = { factor = 10 }
+	}
+	option = { # to neighbor's culture
+		name = OK
+		location = {
+			random_neighbor_province = { 
+				limit = {
+					NOT = { culture = magic }
+					NOT = { culture = aen_seidhe }
+					NOT = { culture = dwarven }
+					NOT = { culture = halfling }
+					NOT = { culture = gnomish }
+				}
+				reverse_culture = ROOT
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+# Remove Magicians in other courts
+character_event = {
+	id = wilderness.103
+	
+	culture = magician
+	
+	trigger = {
+		is_ruler = no
+	}
+	
+	mean_time_to_happen = {
+		months = 0.001
+	}
+	
+	immediate = {
+		log = "**(Wilderness)** Killing [Root.GetBestName]([This.GetID]) that is not in wilderness court"
+		death = { death_reason = death_missing } 
+	}
+}

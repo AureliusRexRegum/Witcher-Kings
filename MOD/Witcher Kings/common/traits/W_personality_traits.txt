@@ -1,0 +1,124 @@
+################################################
+# PERSONALITY
+################################################
+racist = {
+	personality = yes
+	opposites = {
+		tolerant
+	}
+	potential = {
+		NOR = {
+			culture = aen_seidhe
+			religion = dana_meadbh
+			culture = dwarven
+			religion = dwarven_religion
+			culture = halfling
+			religion = halfling_religion
+			culture = gnomish
+			religion = gnomish_religion
+			culture = dryad
+			religion = dryad_religion
+		}
+	}
+	
+	church_opinion = 5
+	opposite_opinion = -20
+	same_opinion = 5
+	
+	opinion_of_human_race = 5
+	opinion_of_witcher = -20
+	
+	opinion_of_elf_race = -20
+	elf_race_opinion = -20
+	halfelf_race_opinion = -10
+	opinion_of_halfelf_race = -10
+	dwarf_race_opinion = -20
+	opinion_of_dwarf_race = -20
+	halfdwarf_race_opinion = -10
+	opinion_of_halfdwarf_race = -10
+	halfling_race_opinion = -20
+	opinion_of_halfling_race = -20
+	halfhalfling_race_opinion = -10
+	opinion_of_halfhalfling_race = -10
+	gnome_race_opinion = -20
+	opinion_of_gnome_race = -20
+	halfgnome_race_opinion = -10
+	opinion_of_halfgnome_race = -10
+	dryad_race_opinion = -20
+	opinion_of_dryad_race = -20
+
+	ai_rationality = -10
+}
+tolerant = {
+	personality = yes
+	opposites = {
+		racist
+	}
+	potential = {
+		NOT = {
+			culture = aen_seidhe
+			religion = dana_meadbh
+			culture = dwarven
+			religion = dwarven_religion
+			culture = halfling
+			religion = halfling_religion
+			culture = gnomish
+			religion = gnomish_religion
+			culture = dryad
+			religion = dryad_religion
+		}
+	}
+	
+	diplomacy = 1
+	opposite_opinion = -20
+	same_opinion = 5
+	
+	witcher_opinion = 10
+	elf_race_opinion = 10
+	halfelf_race_opinion = 10
+	dwarf_race_opinion = 10
+	halfdwarf_race_opinion = 10
+	halfling_race_opinion = 10
+	halfhalfling_race_opinion = 10
+	gnome_race_opinion = 10
+	halfgnome_race_opinion = 10
+	dryad_race_opinion = 10
+}
+reasonable = {
+	personality = yes
+	
+	opposites = {
+		stubborn
+		gambler
+	}
+	
+	diplomacy = 1
+	intrigue = 2
+	stewardship = 1
+	
+	ai_rationality = 50
+	ai_honor = -10
+	
+	opposite_opinion = -10
+}
+gambler = {
+	personality = yes
+	
+	opposites = {
+		reasonable
+	}
+	
+	diplomacy = -1
+	intrigue = 3
+	
+	command_modifier = {
+		random = 0.2
+	}
+	
+	same_opinion = 5
+	
+	ai_rationality = -20
+	ai_greed = 10
+	ai_zeal = 10
+	ai_ambition = 10
+}

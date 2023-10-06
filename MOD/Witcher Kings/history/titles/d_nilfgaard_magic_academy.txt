@@ -1,0 +1,6 @@
+1269.1.1={
+	active = yes
+	de_jure_liege = e_nilfgaard
+	liege = e_nilfgaard
+	holder = 155402
+}
