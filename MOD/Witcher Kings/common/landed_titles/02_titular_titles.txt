@@ -1,0 +1,132 @@
+e_hakland = {
+	color = { 158 162 30 }
+	color2 = { 255 255 255 }
+	
+	capital = 366
+	
+	# Always exists
+	landless = yes
+	
+	culture = haak
+	religion = yer
+}
+d_thanedd = {
+	color={ 65 81 120 }
+	color2={ 255 255 255 }
+		
+	allow = {
+		OR = {
+			lower_tier_than = KING
+			any_demesne_province = { OR = { province_id = 22 province_id = 396 province_id = 491 } }
+		}
+	}
+
+	title = "HEADMASTER"
+	title_female = "HEADMISTRESS"
+		
+	capital = 16 # Thanedd
+		
+	monthly_income = 2
+		
+	religion = melitele
+	
+	can_be_claimed = no
+	
+	landless = yes # Always exists
+	primary = yes # Cannot be held as a secondary title
+}
+d_nilfgaard_magic_academy = {
+	color = { 180 180 180 }
+	color2 = { 255 255 255 }
+	
+	title = "HEADMASTER"
+	title_female = "HEADMISTRESS"
+	
+	capital = 175 # Nilfgaard Academy @ Loc Grim
+	
+	short_name = yes
+	
+	religion = solar
+	
+	can_be_claimed = no
+	
+	landless = yes # Always exists
+	primary = yes # Cannot be held as a secondary title
+}
+d_ban_ard_academy = {
+	color = { 180 180 180 }
+	color2 = { 255 255 255 }
+	
+	title = "HEADMASTER"
+	title_female = "HEADMISTRESS"
+	
+	short_name = yes
+	
+	capital = 91 # Akademia @ Ban Ard
+	
+	religion = kreve
+	
+	can_be_claimed = no
+	
+	landless = yes # Always exists
+	primary = yes # Cannot be held as a secondary title
+}
+d_wilderness = {
+	color = { 20 20 20 }
+	color2 = { 255 255 255 }
+	
+	title = "WILDERNESS"
+	title_female = "WILDERNESS"
+	
+	short_name = yes
+	
+	landless = yes # Always exists
+	primary = yes # Cannot be held as a secondary title
+	
+	dynasty_title_names = no 
+}
+e_hen_caerme = {
+	color={ 98 77 180 }
+	color2={ 255 255 255 }
+	
+	capital = 131 # Casnewydd
+	creation_requires_capital = no
+	
+	allow = {
+		FROM = { # FROM = this title
+			any_previous_holder = { always = yes } # The title has existed before
+		}
+	}
+	
+	culture = aen_seidhe
+	religion = dana_meadbh
+}
+e_dwarf_empire = {
+	color={ 65 81 120 }
+	color2={ 255 255 255 }
+	
+	capital = 374 # Carbon
+	creation_requires_capital = no
+	
+	allow = {
+		FROM = { # FROM = this title
+			any_previous_holder = { always = yes } # The title has existed before
+		}
+	}
+	
+	culture = dwarven
+	religion = dwarven_religion
+}
+e_the_north = {
+	color={ 86 50 159 }
+	color2={ 255 255 20 }
+	
+	capital = 5 # Wyzima
+	creation_requires_capital = no
+	
+	allow = {
+		FROM = { # FROM = this title
+			any_previous_holder = { always = yes } # The title has existed before
+		}
+	}
+}
