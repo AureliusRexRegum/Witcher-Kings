@@ -4,11 +4,17 @@
 
 For more info on mod features, check the [Witcher Kings wiki page](https://ck2.paradoxwikis.com/Witcher_Kings).
 
-The mod can be downloaded from:
+Current "beta" for 3.3.x:
+
+* [Github](https://github.com/AureliusRexRegum/Witcher-Kings)
+
+
+V11 and below can be found here:
 
 * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=1396521902)
 * [Paradox forums](https://forum.paradoxplaza.com/forum/index.php?threads/mod-witcher-kings.740988)
 * [Mod DB](https://www.moddb.com/mods/the-witcher-kings)
+* [Github](https://github.com/dworschak/Witcher)
 
 ### Developers
 
@@ -16,7 +22,7 @@ See the [contributing guide](./CONTRIBUTING.md).
 
 Check the information in the [modding guide](./MODDING.md).
 
-Use the [Validator](https://ck2.paradoxwikis.com/The_Validator) extensively !
+Use the [Validator](https://ck2.paradoxwikis.com/The_Validator) extensively!
 
 To run the mod from a Git local repository:
 - Clone the repository to Git default location (for instance C:\Users\username\git\)

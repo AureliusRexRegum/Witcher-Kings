@@ -1,0 +1,45 @@
+Aurelius Changelog/wip (Updated version of my changelog is usually in my branch)
+
+- Added basic localisation for Magic Academy and Mage tower
+- Magic Academy Tweaks
+- fixed spelling of w_sucession_laws to w_succession_laws
+- blocked ability to make claims on the magic academy titulars
+- Ongoing Validator Fixes (All parse failures fixed for now)
+- fixed la valette rebellion invalid cb
+
+General dev changelog: 
+- Made a custom government for the magic academies (d_thanedd, d_ban_ard_academy, d_nilfgaard_magic_academy)
+- Magic Academies reverting to feudal fixed
+
+ajjr1996 changelog/wip
+
+- Added enclaves and various rule changes before you start your campaign.
+- added expel elder races*
+- Toned down elder races reclamation more so matches pogroms
+- Fixed Beard Issues ( still tweaking )
+- "Fixed" Geralt ( needs DNA for hair )
+- Reginald fixed to resemble a man
+- Converting to spouse's religion fixed
+- Iorweth employed by Saskia FINALLY!
+- Fixed wilderness finding wolf child in woods ( deciding to remove the event completely )
+- Magicians purged more frequently. 0.001
+- Wilderness characters purged more frequently. 0.001
+
+Kingdom Changes:
+- Moved Kovir & Poviss capital to c_lan_exter ( there's a mage temple next to it, seems to work best )
+- Changed up Northern Empire reformation to be able to be acquired, but, only by gaining four of these major kingdoms: Aedirn, Kaedwen, Kovir & Poviss, Lyria & Rivia, Skellig, Redania, and Temeria decision available after acquiring two major kingdoms.
+- Emblonia gone! THANK GOD!
+- Removed Dragon Coast now split to dejure Cidaris, Kerack, and Verden with their dejure lands.
+- Lyria & Rivia no longer a Nilfgaardian vassal at start of AoK
+
+CBs:
+- reclamation only possible by a formed e_hen_caerme or e_dwarf_empire
+- Northern Reclamation CB for e_the_north. Similar to Nilfgaards reclamation/invasion. adds a long-term goal for northerners. (Still needs tweaking/some fixing)
+- Pogroms changed to give ruler province.
+
+-Magic Academies-
+- Gave Nilfgaard Magic Academy a capital in Loc Grim, lore accurate.
+- Edited magic events involving magic academies
+- Made all Academies increase tech_growth_modifier = 0.3 and economy_techpoints = 0.05 ( colleges more in the future and magic schools about half of the buffs )
+- Only Northern mages can destroy academies that are Southern or vice versa. 
+- Academies no longer able to be taken by force, UNLESS you're of another culture/religion. ( and potentially eradicate the other schools be able to dismantle the other schools )
