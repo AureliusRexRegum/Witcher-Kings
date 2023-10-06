@@ -1,4 +1,4 @@
-name = "Witcher Kings"
+name = "Witcher Kings Dev"
 path = "mod/Witcher Kings"
 
 user_dir = "Witcher"
