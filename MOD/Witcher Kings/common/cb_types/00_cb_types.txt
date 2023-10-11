@@ -7798,19 +7798,7 @@ dejure_barony_claim = {
 
 	can_use = {
 		FROM = { NOT = { culture = wilderness } }
-		ROOT = { NOT = { culture = wilderness } }
-		FROM = {
-			NOT = {
-				b_akademi
-				b_nilfgaard_magic_academy
-				d_thanedd
-			} 
-		}
-		ROOT = {
-			NOT = {
-				b_akademi
-				b_nilfgaard_magic_academy
-				d_thanedd
+		ROOT = { NOT = { culture = wilderness } }		
 			} 
 		}
 		FROM = {
