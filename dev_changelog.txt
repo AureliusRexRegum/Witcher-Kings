@@ -6,6 +6,7 @@ Aurelius Changelog/wip (Updated version of my changelog is usually in my branch)
 - blocked ability to make claims on the magic academy titulars
 - Ongoing Validator Fixes (All parse failures fixed for now)
 - fixed la valette rebellion invalid cb
+- Removed alchemists guild specific clothing
 
 General dev changelog: 
 - Made a custom government for the magic academies (d_thanedd, d_ban_ard_academy, d_nilfgaard_magic_academy)
