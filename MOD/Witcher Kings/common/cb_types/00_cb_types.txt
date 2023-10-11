@@ -7798,9 +7798,7 @@ dejure_barony_claim = {
 
 	can_use = {
 		FROM = { NOT = { culture = wilderness } }
-		ROOT = { NOT = { culture = wilderness } }		
-			} 
-		}
+		ROOT = { NOT = { culture = wilderness } }
 		FROM = {
 			NOT = { is_vassal_or_below = ROOT }
 			OR = {

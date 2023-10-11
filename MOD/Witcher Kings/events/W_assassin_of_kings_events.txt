@@ -21,8 +21,6 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTAaok.1
-		clr_character_flag = aok_foltest
-		set_character_flag = aok_foltest_start
 	}
 }
 # Arjan Starting Narrative
@@ -42,8 +40,6 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTAaok.2
-		clr_character_flag = aok_arjan
-		set_character_flag = aok_arjan_start
 	}
 }
 # Foltest offer Arjan to surrender during siege (on_siege_pulse)
