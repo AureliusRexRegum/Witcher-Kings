@@ -1251,3 +1251,5 @@ character_event = {
 		}
 	}
 }
+W_nilfgaard_events.txt
+37 KB

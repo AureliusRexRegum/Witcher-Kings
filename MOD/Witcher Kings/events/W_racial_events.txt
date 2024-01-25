@@ -129,6 +129,16 @@ character_event = {
 		if = {
 			limit = {
 				OR = {
+					father_even_if_dead = { graphical_culture = elfgfx }
+					mother_even_if_dead = { graphical_culture = elfgfx }
+				}
+			}
+			remove_trait = halfelf_race
+			add_trait = human_race
+		}
+		if = {
+			limit = {
+				OR = {
 					father_even_if_dead = { graphical_culture = dwarvengfx }
 					mother_even_if_dead = { graphical_culture = dwarvengfx }
 				}
@@ -644,7 +654,6 @@ character_event = {
 		trait = human_race # Other immortal races have culturegfx where portraits are duplicated for all ages.
 		age = 50
 	}
-	
 	option = {
 		name = OK
 		set_graphical_culture = western_sorcerer

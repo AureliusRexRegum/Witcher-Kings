@@ -1,7 +1,7 @@
 ############################################
 ## Dwarfs from 	     60000-64999
 ############################################
-## 60000	15000	Hoog			d_mahakam, c_carbon		XX
+## 60000	15000	Hoog			d_carbon, c_carbon		XX
 ## 60150	15002	Zigrin			c_mons_arx							XX
 ## 60300	15004	Els				c_arnkell							XX
 ## 60450	15006	Skaggs			c_caiseal									

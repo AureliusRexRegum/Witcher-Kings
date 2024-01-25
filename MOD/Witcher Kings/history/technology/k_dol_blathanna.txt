@@ -1,7 +1,7 @@
 #DOL BLATHANNA
 technology = {
 	titles = {
-		d_dol_blathanna
+		d_casnewydd
 	}
 	1200 = {
 		military = 0.5

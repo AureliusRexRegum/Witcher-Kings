@@ -14,469 +14,468 @@ namespace = HL
 # ID HL.1000-HL.1099                      #
 ###########################################
 
-# Child is born with Wolf's blood
-character_event = {
-	id = HL.1000
-
-	hide_window = yes
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_dlc = "Horse Lords"
-
-		#culture_group = altaic
-		#NOT = { culture = khitan }
-		OR = {
-			father = {
-				NOT = { num_of_children = 2 }
-			}
-			mother = {
-				NOT = { num_of_children = 2 }
-			}
-		}
-		NOT = {
-			any_close_relative = {
-				OR = {
-					has_character_modifier = wolf_child
-					has_character_modifier = wolf_blood
-				}
-			}
-		}
-	}
-	
-	immediate = {
-		random = {
-			chance = 5
-			father = { narrative_event = { id = HL.1001 days = 300 } }
-			mother = { narrative_event = { id = HL.1001 days = 300 } }
-		}
-	}
-}
-
-# Baby shows wolf-like behavior
-narrative_event = {
-	id = HL.1001
-	title = EVTTITLE_HL_1001
-	desc = EVTDESC_HL_1001
-	picture = GFX_evt_birth
-	border = GFX_event_narrative_frame_war
-
-	is_triggered_only = yes
-	
-	capable_only = yes	
-	
-	trigger = {
-		FROM = { is_alive = yes }
-		NOT = { trait = sickly }
-	}
-	
-	option = {
-		name = EVTOPTA_HL_1001 # Positive response
-		FROM = {
-			add_character_modifier = {
-				name = wolf_child
-				duration = -1
-			}
-			set_character_flag = wolf_blood_first_generation
-		}
-		opinion = {
-			who = FROM
-			modifier = opinion_favorite
-			years = 100
-		}
-	}
-	option = {
-		name = EVTOPTB_HL_1001 # Negative response
-		FROM = {
-			add_character_modifier = {
-				name = wolf_child
-				duration = -1
-			}
-			set_character_flag = wolf_blood_first_generation
-		}
-		opinion = {
-			who = FROM
-			modifier = opinion_worried
-			years = 15
-		}
-	}
-}
-
-# Childless ruler finds child nursed by wolves, may adopt...
-narrative_event = {
-	id = HL.1010
-	title = EVTTITLE_HL_1001
-	desc = EVTDESC_HL_1010
-	picture = GFX_evt_birth
-	border = GFX_event_narrative_frame_war
-
-	is_triggered_only = yes
-	
-	capable_only = yes
-	only_playable = yes
-	
-	trigger = {
-	NOT = { 
-		culture = wilderness
-		trait = sorcerer
-	}
-		has_dlc = "Horse Lords"
-		is_adult = yes
-		NOT = { num_of_children = 1 }
-		#culture_group = altaic
-		#NOT = { culture = khitan }
-		NOT = {
-			any_close_relative = {
-				OR = {
-					has_character_modifier = wolf_child
-					has_character_modifier = wolf_blood
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_HL_1010 # Take the child in and adopt it
-		create_character = {
-			age = 1
-			dynasty = ROOT
-		}
-		new_character = {
-			if = {
-				limit = { ROOT = { is_female = no } }
-				set_father = ROOT
-			}
-			if = {
-				limit = { ROOT = { is_female = yes } }
-				set_mother = ROOT
-			}
-			set_character_flag = wolf_blood_first_generation
-			add_character_modifier = {
-				name = wolf_child
-				duration = -1
-			}
-		}
-		custom_tooltip = { text = adopt_wolf_child }
-	}
-	option = {
-		name = EVTOPTB_HL_1010 # Leave it
-		piety = -10
-	}
-}
-
-# Child (ruler or child to ruler) gets lost in woods. Is taken in and rescued by wolves..
-narrative_event = {
-	id = HL.1020
-	title = EVTTITLE_HL_1001
-	desc = EVTDESC_HL_1020
-	picture = GFX_evt_wolf
-	border = GFX_event_narrative_frame_war
-
-	is_triggered_only = yes
-	
-	capable_only = yes	
-	
-	trigger = {
-		has_dlc = "Horse Lords"
-		#culture_group = altaic
-		#NOT = { culture = khitan }
-		age = 5
-		NOT = { age = 10 }
-		NOT = {	any_sibling = { is_older_than = ROOT } }
-		OR = {
-			father = { ai = no }
-			mother = { ai = no }
-		}
-		NOT = {
-			any_close_relative = {
-				OR = {
-					has_character_modifier = wolf_child
-					has_character_modifier = wolf_blood
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_HL_1020
-		set_character_flag = wolf_blood_first_generation
-		add_character_modifier = {
-			name = wolf_child
-			duration = -1
-		}
-		hidden_tooltip = {
-			father = { narrative_event = { id = HL.1021 } }
-			mother = { narrative_event = { id = HL.1021 } }
-		}
-	}
-}
-
-# Child tells parent of experience with wolves...
-narrative_event = {
-	id = HL.1021
-	title = EVTTITLE_HL_1001
-	desc = EVTDESC_HL_1021
-	picture = GFX_evt_wolf
-	border = GFX_event_narrative_frame_war
-
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_HL_1021 # Positive response
-		tooltip = {
-			FROM = {
-				add_character_modifier = {
-					name = wolf_child
-					duration = -1
-				}
-			}
-		}
-		opinion = {
-			who = FROM
-			modifier = opinion_impressed
-			years = 3
-		}
-	}
-	option = {
-		name = EVTOPTB_HL_1021 # Negative response
-		tooltip = {
-			FROM = {
-				add_character_modifier = {
-					name = wolf_child
-					duration = -1
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_opinion_modifier = {
-						who = FROM
-						modifier = opinion_worried
-					}
-				}
-			}
-			opinion = {
-				who = FROM
-				modifier = opinion_worried
-				years = 3
-			}
-		}
-	}
-}
-
-# Child getting older, court rumors of real mother being a wolf
-narrative_event = {
-	id = HL.1030
-	title = EVTTITLE_HL_1030
-	desc = EVTDESC_HL_1030
-	picture = GFX_evt_whispers
-	border = GFX_event_narrative_frame_war
-
-	is_triggered_only = yes
-	
-	has_character_flag = wolf_blood_first_generation
-	capable_only = yes	
-	
-	trigger = {
-		age = 13
-		OR = {
-			father = { ai = no }
-			mother = { ai = no }
-		}
-		NOT = { has_character_flag = wolf_spawn_rumors }
-	}
-	
-	option = {
-		name = EVTOPTA_HL_1030
-		set_character_flag = wolf_spawn_rumors
-		hidden_tooltip = {
-			father = { narrative_event = { id = HL.1031 } }
-			mother = { narrative_event = { id = HL.1031 } }
-		}
-		prestige = 20
-		if = {
-			limit = { NOT = { trait = proud } }
-			random = {
-				chance = 30
-				add_trait = proud
-				hidden_tooltip = {
-					character_event = {
-						id = 38261 #Notify Proud
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_HL_1030
-		trigger = {
-			mother_even_if_dead = { always = yes }
-		}
-		set_character_flag = wolf_spawn_rumors
-		hidden_tooltip = {
-			father = { narrative_event = { id = HL.1031 } }
-			mother = { narrative_event = { id = HL.1031 } }
-		}
-		if = {
-			limit = { trait = wroth }
-			random = {
-				chance = 30
-				add_trait = deceitful
-				hidden_tooltip = {
-					character_event = {
-						id = 38255 #Notify Deceitful
-					}
-				}
-			}
-		}
-		if = {
-			limit = { NOT = { trait = wroth } }
-			random = {
-				chance = 30
-				add_trait = wroth
-				hidden_tooltip = {
-					character_event = {
-						id = 38254 #Notify Wroth
-					}
-				}
-			}
-		}
-		mother = {
-			reverse_opinion = {
-				who = ROOT
-				modifier = strengthened_loyalty
-				years = 3
-			}
-		}
-	}
-	option = {
-		name = EVTOPTC_HL_1030
-		set_character_flag = wolf_spawn_rumors
-		hidden_tooltip = {
-			father = { narrative_event = { id = HL.1031 } }
-			mother = { narrative_event = { id = HL.1031 } }
-		}
-		if = {
-			limit = { trait = paranoid }
-			random = {
-				chance = 30
-				add_trait = envious
-				hidden_tooltip = {
-					character_event = {
-						id = 38271 #Notify Envious
-					}
-				}
-			}
-		}
-		if = {
-			limit = { NOT = { trait = paranoid } }
-			random = {
-				chance = 30
-				add_trait = paranoid
-				hidden_tooltip = {
-					character_event = {
-						id = 38275 #Notify Paranoid
-					}
-				}
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_HL_1030
-		set_character_flag = wolf_spawn_rumors
-		hidden_tooltip = {
-			father = { narrative_event = { id = HL.1031 } }
-			mother = { narrative_event = { id = HL.1031 } }
-		}
-		prestige = 10
-	}
-}
-
-# Parents hear wolf rumors
-narrative_event = {
-	id = HL.1031
-	title = EVTTITLE_HL_1031
-	desc = EVTDESC_HL_1031
-	picture = GFX_evt_whispers
-	border = GFX_event_narrative_frame_war
-
-	is_triggered_only = yes
-	capable_only = yes
-
-	option = {
-		name = EVTOPTA_HL_1031			# Accept gossip
-		reverse_opinion = {
-			who = FROM
-			modifier = opinion_approves
-			years = 3
-		}
-	}
-	option = {
-		name = EVTOPTB_HL_1031			# Disapprove of gossip
-		prestige = 30
-	}
-}
-
-# Reaches maturity - change Wolf-Child modifier to Wolf's Blood
-character_event = {
-	id = HL.1040
-	title = EVTTITLE_HL_1040
-	desc = EVTDESC_HL_1040
-	picture = GFX_evt_wolf
-	border = GFX_event_normal_frame_war
-
-	is_triggered_only = yes
-
-	has_character_flag = wolf_blood_first_generation
-	
-	option = {
-		name = EVTOPTA_HL_1040
-		remove_character_modifier = wolf_child
-		add_character_modifier = {
-			name = wolf_blood
-			duration = -1
-		}
-		hidden_tooltip = {
-			father = { character_event = { id = HL.1041 } }
-			mother = { character_event = { id = HL.1041 } }
-		}
-		if = {
-			limit = { has_nickname = no }
-			give_nickname = nick_the_wolf
-		}
-	}
-}
-
-# Reach maturity - notify parents
-character_event = {
-	id = HL.1041
-	title = EVTTITLE_HL_1040
-	desc = EVTDESC_HL_1041
-	picture = GFX_evt_wolf
-	border = GFX_event_normal_frame_war
-
-	is_triggered_only = yes
-	capable_only = yes
-	
-	option = {
-		name = EVTOPTA_HL_1041
-		tooltip = {
-			FROM = {
-				remove_character_modifier = wolf_child
-				add_character_modifier = {
-					name = wolf_blood
-					duration = -1
-				}
-			}
-			if = {
-				limit = { has_nickname = nick_the_wolf }
-				give_nickname = nick_the_wolf
-			}
-		}
-	}
-}
+## Child is born with Wolf's blood
+##character_event = {
+#	id = HL.1000
+#
+#	hide_window = yes
+#	
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#		has_dlc = "Horse Lords"
+#
+#		#culture_group = altaic
+#		#NOT = { culture = khitan }
+#		OR = {
+#			father = {
+#				NOT = { num_of_children = 2 }
+#			}
+#			mother = {
+#				NOT = { num_of_children = 2 }
+#			}
+#		}
+#		NOT = {
+#			any_close_relative = {
+#				OR = {
+#					has_character_modifier = wolf_child
+#					has_character_modifier = wolf_blood
+#				}
+#			}
+#		}
+#	}
+#	
+#	immediate = {
+#		random = {
+#			chance = 5
+#			father = { narrative_event = { id = HL.1001 days = 300 } }
+#			mother = { narrative_event = { id = HL.1001 days = 300 } }
+#		}
+#	}
+#}
+#
+## Baby shows wolf-like behavior
+#narrative_event = {
+#	id = HL.1001
+#	title = EVTTITLE_HL_1001
+#	desc = EVTDESC_HL_1001
+#	picture = GFX_evt_birth
+#	border = GFX_event_narrative_frame_war
+#
+#	is_triggered_only = yes
+#	
+#	capable_only = yes	
+#	
+#	trigger = {
+#		FROM = { is_alive = yes }
+#		NOT = { trait = sickly }
+#	}
+#	
+#	option = {
+#		name = EVTOPTA_HL_1001 # Positive response
+#		FROM = {
+#			add_character_modifier = {
+#				name = wolf_child
+#				duration = -1
+#			}
+#			set_character_flag = wolf_blood_first_generation
+#		}
+#		opinion = {
+#			who = FROM
+#			modifier = opinion_favorite
+#			years = 100
+#		}
+#	}
+#	option = {
+#		name = EVTOPTB_HL_1001 # Negative response
+#		FROM = {
+#			add_character_modifier = {
+#				name = wolf_child
+#				duration = -1
+#			}
+#			set_character_flag = wolf_blood_first_generation
+#		}
+#		opinion = {
+#			who = FROM
+#			modifier = opinion_worried
+#			years = 15
+#		}
+#	}
+#}
+#
+## Childless ruler finds child nursed by wolves, may adopt...
+#narrative_event = {
+#	id = HL.1010
+#	title = EVTTITLE_HL_1001
+#	desc = EVTDESC_HL_1010
+#	picture = GFX_evt_birth
+#	border = GFX_event_narrative_frame_war
+#
+#	is_triggered_only = yes
+#	
+#	capable_only = yes
+#	only_playable = yes
+#	
+#	trigger = {
+#	NOT = { 
+#		culture = wilderness
+#	}
+#		has_dlc = "Horse Lords"
+#		is_adult = yes
+#		NOT = { num_of_children = 1 }
+#		#culture_group = altaic
+#		#NOT = { culture = khitan }
+#		NOT = {
+#			any_close_relative = {
+#				OR = {
+#					has_character_modifier = wolf_child
+#					has_character_modifier = wolf_blood
+#				}
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPTA_HL_1010 # Take the child in and adopt it
+#		create_character = {
+#			age = 1
+#			dynasty = ROOT
+#		}
+#		new_character = {
+#			if = {
+#				limit = { ROOT = { is_female = no } }
+#				set_father = ROOT
+#			}
+#			if = {
+#				limit = { ROOT = { is_female = yes } }
+#				set_mother = ROOT
+#			}
+#			set_character_flag = wolf_blood_first_generation
+#			add_character_modifier = {
+#				name = wolf_child
+#				duration = -1
+#			}
+#		}
+#		custom_tooltip = { text = adopt_wolf_child }
+#	}
+#	option = {
+#		name = EVTOPTB_HL_1010 # Leave it
+#		piety = -10
+#	}
+#}
+#
+## Child (ruler or child to ruler) gets lost in woods. Is taken in and rescued by wolves..
+#narrative_event = {
+#	id = HL.1020
+#	title = EVTTITLE_HL_1001
+#	desc = EVTDESC_HL_1020
+#	picture = GFX_evt_wolf
+#	border = GFX_event_narrative_frame_war
+#
+#	is_triggered_only = yes
+#	
+#	capable_only = yes	
+#	
+#	trigger = {
+#		has_dlc = "Horse Lords"
+#		#culture_group = altaic
+#		#NOT = { culture = khitan }
+#		age = 5
+#		NOT = { age = 10 }
+#		NOT = {	any_sibling = { is_older_than = ROOT } }
+#		OR = {
+#			father = { ai = no }
+#			mother = { ai = no }
+#		}
+#		NOT = {
+#			any_close_relative = {
+#				OR = {
+#					has_character_modifier = wolf_child
+#					has_character_modifier = wolf_blood
+#				}
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPTA_HL_1020
+#		set_character_flag = wolf_blood_first_generation
+#		add_character_modifier = {
+#			name = wolf_child
+#			duration = -1
+#		}
+#		hidden_tooltip = {
+#			father = { narrative_event = { id = HL.1021 } }
+#			mother = { narrative_event = { id = HL.1021 } }
+#		}
+#	}
+#}
+#
+## Child tells parent of experience with wolves...
+#narrative_event = {
+#	id = HL.1021
+#	title = EVTTITLE_HL_1001
+#	desc = EVTDESC_HL_1021
+#	picture = GFX_evt_wolf
+#	border = GFX_event_narrative_frame_war
+#
+#	is_triggered_only = yes
+#	
+#	option = {
+#		name = EVTOPTA_HL_1021 # Positive response
+#		tooltip = {
+#			FROM = {
+#				add_character_modifier = {
+#					name = wolf_child
+#					duration = -1
+#				}
+#			}
+#		}
+#		opinion = {
+#			who = FROM
+#			modifier = opinion_impressed
+#			years = 3
+#		}
+#	}
+#	option = {
+#		name = EVTOPTB_HL_1021 # Negative response
+#		tooltip = {
+#			FROM = {
+#				add_character_modifier = {
+#					name = wolf_child
+#					duration = -1
+#				}
+#			}
+#		}
+#		if = {
+#			limit = {
+#				NOT = {
+#					has_opinion_modifier = {
+#						who = FROM
+#						modifier = opinion_worried
+#					}
+#				}
+#			}
+#			opinion = {
+#				who = FROM
+#				modifier = opinion_worried
+#				years = 3
+#			}
+#		}
+#	}
+#}
+#
+## Child getting older, court rumors of real mother being a wolf
+#narrative_event = {
+#	id = HL.1030
+#	title = EVTTITLE_HL_1030
+#	desc = EVTDESC_HL_1030
+#	picture = GFX_evt_whispers
+#	border = GFX_event_narrative_frame_war
+#
+#	is_triggered_only = yes
+#	
+#	has_character_flag = wolf_blood_first_generation
+#	capable_only = yes	
+#	
+#	trigger = {
+#		age = 13
+#		OR = {
+#			father = { ai = no }
+#			mother = { ai = no }
+#		}
+#		NOT = { has_character_flag = wolf_spawn_rumors }
+#	}
+#	
+#	option = {
+#		name = EVTOPTA_HL_1030
+#		set_character_flag = wolf_spawn_rumors
+#		hidden_tooltip = {
+#			father = { narrative_event = { id = HL.1031 } }
+#			mother = { narrative_event = { id = HL.1031 } }
+#		}
+#		prestige = 20
+#		if = {
+#			limit = { NOT = { trait = proud } }
+#			random = {
+#				chance = 30
+#				add_trait = proud
+#				hidden_tooltip = {
+#					character_event = {
+#						id = 38261 #Notify Proud
+#					}
+#				}
+#			}
+#		}
+#	}
+#	option = {
+#		name = EVTOPTB_HL_1030
+#		trigger = {
+#			mother_even_if_dead = { always = yes }
+#		}
+#		set_character_flag = wolf_spawn_rumors
+#		hidden_tooltip = {
+#			father = { narrative_event = { id = HL.1031 } }
+#			mother = { narrative_event = { id = HL.1031 } }
+#		}
+#		if = {
+#			limit = { trait = wroth }
+#			random = {
+#				chance = 30
+#				add_trait = deceitful
+#				hidden_tooltip = {
+#					character_event = {
+#						id = 38255 #Notify Deceitful
+#					}
+#				}
+#			}
+#		}
+#		if = {
+#			limit = { NOT = { trait = wroth } }
+#			random = {
+#				chance = 30
+#				add_trait = wroth
+#				hidden_tooltip = {
+#					character_event = {
+#						id = 38254 #Notify Wroth
+#					}
+#				}
+#			}
+#		}
+#		mother = {
+#			reverse_opinion = {
+#				who = ROOT
+#				modifier = strengthened_loyalty
+#				years = 3
+#			}
+#		}
+#	}
+#	option = {
+#		name = EVTOPTC_HL_1030
+#		set_character_flag = wolf_spawn_rumors
+#		hidden_tooltip = {
+#			father = { narrative_event = { id = HL.1031 } }
+#			mother = { narrative_event = { id = HL.1031 } }
+#		}
+#		if = {
+#			limit = { trait = paranoid }
+#			random = {
+#				chance = 30
+#				add_trait = envious
+#				hidden_tooltip = {
+#					character_event = {
+#						id = 38271 #Notify Envious
+#					}
+#				}
+#			}
+#		}
+#		if = {
+#			limit = { NOT = { trait = paranoid } }
+#			random = {
+#				chance = 30
+#				add_trait = paranoid
+#				hidden_tooltip = {
+#					character_event = {
+#						id = 38275 #Notify Paranoid
+#					}
+#				}
+#			}
+#		}
+#	}
+#	option = {
+#		name = EVTOPTD_HL_1030
+#		set_character_flag = wolf_spawn_rumors
+#		hidden_tooltip = {
+#			father = { narrative_event = { id = HL.1031 } }
+#			mother = { narrative_event = { id = HL.1031 } }
+#		}
+#		prestige = 10
+#	}
+#}
+#
+## Parents hear wolf rumors
+#narrative_event = {
+#	id = HL.1031
+#	title = EVTTITLE_HL_1031
+#	desc = EVTDESC_HL_1031
+#	picture = GFX_evt_whispers
+#	border = GFX_event_narrative_frame_war
+#
+#	is_triggered_only = yes
+#	capable_only = yes
+#
+#	option = {
+#		name = EVTOPTA_HL_1031			# Accept gossip
+#		reverse_opinion = {
+#			who = FROM
+#			modifier = opinion_approves
+#			years = 3
+#		}
+#	}
+#	option = {
+#		name = EVTOPTB_HL_1031			# Disapprove of gossip
+#		prestige = 30
+#	}
+#}
+#
+## Reaches maturity - change Wolf-Child modifier to Wolf's Blood
+#character_event = {
+#	id = HL.1040
+#	title = EVTTITLE_HL_1040
+#	desc = EVTDESC_HL_1040
+#	picture = GFX_evt_wolf
+#	border = GFX_event_normal_frame_war
+#
+#	is_triggered_only = yes
+#
+#	has_character_flag = wolf_blood_first_generation
+#	
+#	option = {
+#		name = EVTOPTA_HL_1040
+#		remove_character_modifier = wolf_child
+#		add_character_modifier = {
+#			name = wolf_blood
+#			duration = -1
+#		}
+#		hidden_tooltip = {
+#			father = { character_event = { id = HL.1041 } }
+#			mother = { character_event = { id = HL.1041 } }
+#		}
+#		if = {
+#			limit = { has_nickname = no }
+#			give_nickname = nick_the_wolf
+#		}
+#	}
+#}
+#
+## Reach maturity - notify parents
+#character_event = {
+#	id = HL.1041
+#	title = EVTTITLE_HL_1040
+#	desc = EVTDESC_HL_1041
+#	picture = GFX_evt_wolf
+#	border = GFX_event_normal_frame_war
+#
+#	is_triggered_only = yes
+#	capable_only = yes
+#	
+#	option = {
+#		name = EVTOPTA_HL_1041
+#		tooltip = {
+#			FROM = {
+#				remove_character_modifier = wolf_child
+#				add_character_modifier = {
+#					name = wolf_blood
+#					duration = -1
+#				}
+#			}
+#			if = {
+#				limit = { has_nickname = nick_the_wolf }
+#				give_nickname = nick_the_wolf
+#			}
+#		}
+#	}
+#}
 
 ###########################################
 # Great Hunt random event - wolves appear #

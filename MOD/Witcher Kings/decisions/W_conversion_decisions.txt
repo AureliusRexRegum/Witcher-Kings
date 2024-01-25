@@ -30,10 +30,7 @@ decisions = {
 			piety = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 	
@@ -54,10 +51,7 @@ decisions = {
 			prestige = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 	
@@ -92,10 +86,7 @@ decisions = {
 			piety = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 	
@@ -116,10 +107,7 @@ decisions = {
 			prestige = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 
@@ -154,10 +142,7 @@ decisions = {
 			piety = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 
@@ -178,10 +163,7 @@ decisions = {
 			prestige = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 
@@ -216,10 +198,7 @@ decisions = {
 			piety = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 	
@@ -240,10 +219,7 @@ decisions = {
 			prestige = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 
@@ -275,10 +251,7 @@ decisions = {
 			piety = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 	
@@ -296,10 +269,7 @@ decisions = {
 			prestige = -100
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
+			factor = 0
 		}
 	}
 }

@@ -6765,6 +6765,7 @@ k_temeria = {
 			b_hollow_den = {
 			}
 		}
+	}
 	d_houtborg = {
 		color={ 64 83 123 }
 		color2={ 255 255 255 }
@@ -7106,7 +7107,6 @@ k_temeria = {
 		}
 	}
 }
-}
 k_brugge = {
 	color={ 38 9 62 }
 	color2={ 255 255 255 }
@@ -7184,17 +7184,29 @@ k_brugge = {
 			color={ 25 81 94 }
 			color2={ 255 255 255 }
 			
-			holy_site = melitele
-			
 			b_mikulov = {
 			}
 			b_litovel = {
 			}
 			b_turlough = {
+				holy_site = melitele
 			}
 			b_mokropsy = {
 			}
 		}
+	}
+	d_dillingen = {
+		color={ 34 56 82 }
+		color2={ 255 255 255 }
+		
+		allow = {
+			OR = {
+				lower_tier_than = KING
+				any_demesne_province = { OR = { province_id = 29 province_id = 31 province_id = 675 province_id = 676 } }
+			}
+		}
+		capital = 29 # c_dillingen
+		
 		c_dillingen = { # 29
 			color={ 24 66 77 }
 			color2={ 255 255 255 }
@@ -7251,6 +7263,7 @@ k_brugge = {
 		}
 	}
 }
+
 k_sodden = {
 	color={ 98 114 181 }
 	color2={ 255 255 255 }
@@ -8257,7 +8270,7 @@ k_dol_blathanna = {
 	capital = 131 # c_casnewydd
 	culture = aen_seidhe
 	
-	d_dol_blathanna = {
+	d_casnewydd = {
 		color={ 108 57 205 }
 		color2={ 255 255 255 }
 		
@@ -8323,6 +8336,19 @@ k_dol_blathanna = {
 			b_hengleanna = {
 			}
 		}
+	}
+	d_gorseinon = {
+		color={ 120 120 190 }
+		color2={ 255 255 255 }
+		
+		allow = {
+			OR = {
+				lower_tier_than = KING
+				any_demesne_province = { OR = { province_id = 133 province_id = 134 province_id = 625 province_id = 626 } }
+			}
+		}
+		capital = 133 # c_gorseinon
+		
 		c_gorseinon = { # 133
 			color={ 130 110 195 }
 			color2={ 255 255 255 }
@@ -8348,7 +8374,7 @@ k_dol_blathanna = {
 			}
 			b_enidelaine = {
 			}
-			b_foilefeainn = {	
+			b_foilefeainn = {
 			}
 			b_gwenevall = {
 			}
@@ -9989,7 +10015,7 @@ k_mahakam = {
 	capital = 374 # c_carbon
 	culture = dwarven
 	
-	d_mahakam = {
+	d_carbon = {
 		color={ 71 94 133 }
 		color2={ 255 255 255 }
 		
@@ -10076,6 +10102,19 @@ k_mahakam = {
 			b_vighgari = {
 			}
 		}
+	}
+	d_arnkell = {
+		color={ 47 77 121 }
+		color2={ 255 255 255 }
+		
+		allow = {
+			OR = {
+				lower_tier_than = KING
+				any_demesne_province = { OR = { province_id = 377 province_id = 564 province_id = 565 } }
+			}
+		}
+		capital = 565 # c_arnkell
+		
 		c_arnkell = { # 565
 			color={ 37 87 116 }
 			color2={ 255 255 255 }
@@ -10114,7 +10153,7 @@ k_mahakam = {
 			}
 			b_khorgaruhm = {
 			}
-			b_khurkohm = {	
+			b_khurkohm = {
 			}
 			b_khem_burimm = {
 			}

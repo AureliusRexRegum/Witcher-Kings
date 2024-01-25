@@ -1,8 +1,8 @@
-# k_dol_blathanna
+#k_brugge
 500.1.1={
 	law = agnatic_succession
 	law = succ_gavelkind
 }
 800.1.1={
-	liege=d_casnewydd
+	liege=k_brugge
 }

@@ -27,6 +27,7 @@ world_the_north = {
 		d_wyzima d_carreras d_dorndal d_ellander d_garramone d_houtborg d_maribor d_mayena d_mortara
 		#Brugge
 		d_brugge
+		d_dillingen
 		#Sodden
 		d_armeria d_vidort d_riverdell d_breza d_kagen
 		#Ard Glas
@@ -36,11 +37,13 @@ world_the_north = {
 		#Cintra
 		d_cintra d_attre d_ortagor d_strept
 		#Dol Blathanna
-		d_dol_blathanna
+		d_casnewydd
+		d_gorseinon
 		#Hengfors League
 		d_caingorn d_arys d_creigiau d_creyden d_lyta d_malleore
 		#Mahakam
-		d_mahakam
+		d_carbon
+		d_arnkell
 		#Smocze Coast
 		d_cidaris d_bremervoord d_hamm d_jaruga d_kerack d_roggeveen
 		#Skellige
